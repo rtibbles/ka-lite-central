@@ -1,0 +1,139 @@
+{% extends base_template %}
+{% load i18n staticfiles %}
+
+{% block title %}{% trans "Install KA Lite woooo" %}{{ block.super }}{% endblock title %}
+
+{% block headcss %}
+<style>
+
+    .install-scenario, .install-scenario-short-description {
+        float: left;
+        width: 32%;
+    }
+
+    .install-scenario {
+        text-align: center;
+    }
+
+    .install-scenario-short-description div {
+        padding: 10px 15% 10px 20px;
+    }
+
+    .install-scenario img {
+        width: 80%;
+        cursor: pointer;
+    }
+
+    .install-scenario img:hover {
+        opacity: 0.7;
+    }
+
+    .centered-title {
+        text-align: center;
+    }
+
+    .content-block {
+        width: 100%;
+    }
+
+    .content-block-hidden {
+        display: none;
+    }
+
+</style>
+{% endblock headcss %}
+
+{% block headjs %}
+<script>
+
+    $(function() {
+
+        $(".install-scenario img").click(function() {
+            // highlight the clicked image, and de-emphasize the others
+            $(this).css("width", "90%").css("opacity", "1");
+            $(".install-scenario img").not(this).css("opacity", "0.5").css("width", "80%");
+
+            // hide the current content block, and show the newly selected one
+            var new_content_block = $("#" + $(this).attr("for"));
+            $(".content-block").hide();
+            new_content_block.show();
+
+        });
+    });
+
+</script>
+{% endblock headjs %}
+
+{% block content %}
+    <h1 class="centered-title">Install KA Lite: Which of these 3 scenarios best describes your needs?</h1>
+
+    <br/>
+
+    <div class="install-scenario">
+        <img src="{% static 'images/central/install/1-standalone.png' %}" for="scenario-1">
+    </div>
+
+    <div class="install-scenario">
+        <img src="{% static 'images/central/install/2-single-server.png' %}" for="scenario-2">
+    </div>
+
+    <div class="install-scenario">
+        <img src="{% static 'images/central/install/3-multi-server.png' %}" for="scenario-3">
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div class="content-block">
+        <div class="install-scenario-short-description">
+            <div>
+                <h2 class="centered-title">Personal Edition</h2>
+                <ul>
+                    <li>Install KA Lite directly to a single computer for offline use.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="install-scenario-short-description">
+            <div>
+                <h2 class="centered-title">Classroom Edition</h2>
+                <ul>
+                    <li>Install KA Lite to an offline server, for multiple client devices to connect to.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="install-scenario-short-description">
+            <div>
+                <h2 class="centered-title">School Edition</h2>
+                <ul>
+                    <li>Larger multi-server deployment, with options for syncing data between servers.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <br/>
+
+    <div class="content-block content-block-hidden" id="scenario-1">
+
+        <h2>You have selected Personal Edition!</h2>
+
+    </div>
+
+    <div class="content-block content-block-hidden" id="scenario-2">
+
+        <h2>You have selected Classroom Edition!</h2>
+
+    </div>
+
+    <div class="content-block content-block-hidden" id="scenario-3">
+
+        <h2>You have selected School Edition!</h2>
+
+    </div>
+
+    <br/>
+
+{% endblock content %}

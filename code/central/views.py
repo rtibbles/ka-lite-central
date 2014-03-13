@@ -47,6 +47,10 @@ def homepage(request):
         "wiki_url": settings.CENTRAL_WIKI_URL
     }
 
+@render_to("central/install.html")
+def install(request):
+    return {}
+
 @login_required
 @render_to("central/org_management.html")
 def org_management(request, org_id=None):

@@ -75,6 +75,8 @@ urlpatterns += patterns('central.views',
     url(r'^feeds/atom/$', AtomSiteNewsFeed(), {}, 'atom_feed'),
     url(r'^faq/', include(faq.urls)),
 
+    url(r'^install/$', 'install', {}, 'install'),
+
     # The install wizard app has two views: both options available (here)
     #   or an "edition" selected (to get more info, or redirect to download, below)
     #url(r'^download/wizard/$', 'download_wizard', {}, 'download_wizard'),
