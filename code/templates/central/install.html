@@ -116,23 +116,140 @@
 
     <br/>
 
+    {# Scenario 1 -- Personal Edition #}
     <div class="content-block content-block-hidden" id="scenario-1">
+        <div class="row">
+            <h1>KA Lite Personal Edition</h1>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <img src="http://placehold.it/350x150">
+            </div>
+            <div class="span6">
+                <p>You're almost there! Just fill out the form below and choose a download option to get started using KA Lite!</p>
+                {# Options Form #}
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                    <div class="controls">
+                      <input type="text" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                      <input type="text" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputOS">Operating System</label>
+                    <div class="controls">
+                      <select id="inputOS">
+                          <option>Windows</option>
+                          <option>Mac</option>
+                          <option>Linux</option>
+                          <option>Raspian</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputCountry">Country</label>
+                    <div class="controls">
+                        <select id="inputCountry">
+                          <option>Country One</option>
+                          <option>Country Two</option>
+                          <option>Country 99</option>
+                          <option>(seewhatididthere)</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputLanguage">Lanugage(s)</label>
+                    <div class="controls">
+                      <select id="inputLanguage" multiple="multiple">
+                          <option>Lanugage One</option>
+                          <option>Lanugage Two</option>
+                          <option>Lanugage 99</option>
+                          <option>(seewhatididthere)</option>
+                      </select>
+                      <span class="help-block">Use CTRL + select to pick more than one.</span>
+                    </div>
+                  </div>
+                  <p>Help keep the project going by making a donation before you download!</p>
+                  <div class="row">
+                    <div class="span6">
+                        <p><a href="#" class="button--large">Donate &amp; Download</a></p>
+                    </div>
+                    <div class="span6">
+                        <p><a href="#" class="button--large">No thanks, just Download</a></p>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div> {# END Scenario 1 -- Personal Edition #}
 
-        <h2>You have selected Personal Edition!</h2>
-
-    </div>
-
+    {# Scenario 2 -- Classroom Edition #}
     <div class="content-block content-block-hidden" id="scenario-2">
 
-        <h2>You have selected Classroom Edition!</h2>
+        {# Option 2 -- classroom edition / single server & multiple users #}
+        <div class="row">
+            <div class="span12">
+                <h1>KA Lite Classroom Edition</h1>
+            </div>
+        </div>
+        <div class="row">
+            {# Do you really want option 1? #}
+            <div class="span6">
+                <h3>Option 1: One-click Install Classroom Edition</h3>
+                <img src="http://placehold.it/350x150">
+                <p>If you just need KA Lite to work for you and your learners, and you don't think you'll ever need our advanced features like viewing usage statistics online, administering user accounts online, retrieving data backups online, then this is the option for you!</p>
+                <p>This type of installation is most popular with:</p>
+                <ul>
+                    <li>Groups installing KA Lite in offline communities that they won't return to</li>
+                    <li>Others?</li>
+                </ul>
+                {# Starts the download or could be a modal popup box to prompt a donation?       #}
+                <p><a href="#" class="button--large">Download Now!</a></p>
+            </div>
+            {# Or do you want option 2? #}
+            <div class="span6">
+                <h3>Option 2: Syncing Classroom Edition</h3>
+                <img src="http://placehold.it/350x150">
+                <p>This option allows you to take advantage of our suite of online tools for managing your installations. With the Syncing Edition, from our online portal, you can administer user accounts, sync data from the installation and view it online, and backup your data online.</p>
+                <p>This type of installation is most popular with:</p>
+                <ul>
+                    <li>??</li>
+                    <li>Others?</li>
+                </ul>
+                {# Takes you to the download wizard #}
+                <p><a href="#" class="button--large">Show me my options</a></p>
+            </div>
+        </div>
+    </div>{# END Option 2 -- classroom edition / single server & multiple users #}
 
-    </div>
-
+    {# Option 3 -- multiple servers #}
     <div class="content-block content-block-hidden" id="scenario-3">
 
-        <h2>You have selected School Edition!</h2>
-
-    </div>
+        <div class="row">
+            <div class="span12">
+                <h1>KA Lite Pomelo Edition</h1>
+            </div>
+        </div>
+        <div class="row">
+            {# Do you really want option 1? #}
+            <div class="span12">
+                <img src="http://placehold.it/350x150">
+                <p>KA Lite Pomelo edition allows you to access all of our online tool suite, allowing you to track engagement with your installation when it syncs data, administer accounts online, and do other cool stuff.</p>
+                <p>This type of installation is most popular with:</p>
+                <ul>
+                    <li>Organizations working in offline communities that need reporting data on their project</li>
+                </ul>
+                {# Starts the download or could be a modal popup box to prompt a donation?       #}
+                <p><a href="#" class="button--large">Show me the options!</a></p>
+            </div>
+        </div>
+    </div> {# END Option 3 -- multiple servers #}
 
     <br/>
 
